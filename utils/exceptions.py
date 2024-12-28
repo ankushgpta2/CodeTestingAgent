@@ -5,3 +5,7 @@ class CodeTestingError(Exception):
 class ValidationError(CodeTestingError):
     """Raised when code validation fails"""
     pass
+
+class TestExecutionError(CodeTestingError):
+    """Raised when test execution fails"""
+    pass
