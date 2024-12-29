@@ -7,3 +7,12 @@ import openai
 from ..models.datatypes import CodeSpec, TestResult
 from ..analyzers.code_analyzer import CodeAnalyzer
 from ..utils.exceptions import TestExecutionError
+
+
+class CodeTester:
+    """Runs and tests code against specifications"""
+    
+    def __init__(self, llm_api_key: str):
+        self.analyzer = CodeAnalyzer()
+        openai.api_key = llm_api_key
+    
