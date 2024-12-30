@@ -8,6 +8,16 @@ class CodeAnalyzer:
     def __init__(self):
         self.issues: List[str] = []
     
+    def analyze_code(self, code_str: str) -> List[str]:
+        """Parse and analyze code for potential issues"""
+        try:
+            tree = ast.parse(code_str)
+            self.issues = []
+            self.check_syntax(tree)
+            return self.issues
+        except SyntaxError as e:
+            raise ValidationError(f"Syntax error: {str(e)}")
+
     def check_syntax(self, tree: ast.AST) -> None:
         """Check basic syntax structures"""
         for node in ast.walk(tree):
