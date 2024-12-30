@@ -13,7 +13,10 @@ class CodeAnalyzer:
         try:
             tree = ast.parse(code_str)
             self.issues = []
+            
             self.check_syntax(tree)
+            self.check_common_issues(tree)
+            
             return self.issues
         except SyntaxError as e:
             raise ValidationError(f"Syntax error: {str(e)}")
@@ -28,3 +31,10 @@ class CodeAnalyzer:
                 for default in node.args.defaults:
                     if isinstance(default, (ast.List, ast.Dict, ast.Set)):
                         self.issues.append(f"Warning: Mutable default argument in function {node.name}")
+    
+    def check_common_issues(self, tree: ast.AST) -> None:
+        """Check for common programming issues"""
+        for node in ast.walk(tree):
+            if isinstance(node, ast.While) and isinstance(node.test, ast.Constant):
+                if node.test.value is True:
+                    self.issues.append("Warning: Possible infinite loop detected")
