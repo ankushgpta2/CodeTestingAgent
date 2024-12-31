@@ -38,3 +38,7 @@ class CodeAnalyzer:
             if isinstance(node, ast.While) and isinstance(node.test, ast.Constant):
                 if node.test.value is True:
                     self.issues.append("Warning: Possible infinite loop detected")
+            
+            if isinstance(node, ast.Compare):
+                if len(node.ops) > 1 and all(isinstance(op, ast.Eq) for op in node.ops):
+                    self.issues.append("Warning: Redundant equality comparison")
