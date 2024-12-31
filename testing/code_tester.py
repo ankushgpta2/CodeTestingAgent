@@ -16,7 +16,7 @@ class CodeTester:
         self.analyzer = CodeAnalyzer()
         openai.api_key = llm_api_key
     
-    def test_code(self, code_str, spec) -> TestResult:
+    def test_code(self, code_str: str, spec: CodeSpec) -> TestResult:
         """Test code against given specifications"""
         issues = self.analyzer.analyze_code(code_str)
         if issues:
