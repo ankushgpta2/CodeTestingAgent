@@ -28,3 +28,6 @@ class CodeTester:
         
         test_env: Dict[str, Any] = {}
         output_buffer = io.StringIO()
+    
+    def _run_test_cases(self, test_env: Dict[str, Any], spec: CodeSpec) -> None:
+        """Run specified test cases"""
