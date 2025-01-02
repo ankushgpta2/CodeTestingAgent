@@ -32,5 +32,5 @@ class CodeTester:
     def _run_test_cases(self, test_env: Dict[str, Any], spec: CodeSpec) -> None:
         """Run specified test cases"""
     
-    def _get_ai_edge_case_feedback(code_str: str, spec: CodeSpec) -> str:
+    def _get_ai_edge_case_feedback(self, code_str: str, spec: CodeSpec) -> str:
         """Use LLM to analyze potential edge cases and provide feedback"""
