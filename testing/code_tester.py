@@ -26,3 +26,5 @@ class CodeTester:
                 feedback="\n".join(issues)
             )
         
+        test_env: Dict[str, Any] = {}
+        output_buffer = io.StringIO()
