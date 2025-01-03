@@ -42,6 +42,9 @@ class CodeTester:
             expected_output = test_case["expected"]
             
             actual_output = main_func(**inputs)
+
+            if not main_func:
+                raise TestExecutionError("No function found in provided code")
         
             if actual_output != expected_output:
                 raise TestExecutionError(
