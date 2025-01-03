@@ -42,6 +42,11 @@ class CodeTester:
             expected_output = test_case["expected"]
             
             actual_output = main_func(**inputs)
+        
+            if actual_output != expected_output:
+                raise TestExecutionError(
+                    f"Test case failed: Expected {expected_output}, got {actual_output}"
+                )
     
     def _get_ai_edge_case_feedback(self, code_str: str, spec: CodeSpec) -> str:
         """Use LLM to analyze potential edge cases and provide feedback"""
