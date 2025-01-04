@@ -35,8 +35,12 @@ class CodeTester:
             
             self._run_test_cases(test_env, spec)
         except Exception as e:
-            """
-            """
+            return TestResult(
+                passed=False,
+                error_message=str(e),
+                stack_trace=traceback.format_exc(),
+                output=output_buffer.getvalue()
+            )
     
     def _run_test_cases(self, test_env: Dict[str, Any], spec: CodeSpec) -> None:
         """Run specified test cases"""
