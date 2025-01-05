@@ -82,4 +82,7 @@ class CodeTester:
         
         Specification:
         {spec.description}
+
+        Expected inputs: {spec.expected_inputs}
+        Expected outputs: {spec.expected_outputs}
         """
