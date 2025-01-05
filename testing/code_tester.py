@@ -32,10 +32,16 @@ class CodeTester:
         try:
             with redirect_stdout(output_buffer):
                 exec(code_str, test_env)
-            
+
             self._run_test_cases(test_env, spec)
             edge_case_feedback = self._get_ai_edge_case_feedback(code_str, spec)
-            
+
+            return TestResult(
+                passed=True,
+                output=output_buffer.getvalue(),
+                feedback=edge_case_feedback
+            )
+
         except Exception as e:
             return TestResult(
                 passed=False,
