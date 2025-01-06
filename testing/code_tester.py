@@ -92,3 +92,10 @@ class CodeTester:
         3. Error handling suggestions
         4. Performance considerations
         """
+
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7,
+            max_tokens=500
+        )
