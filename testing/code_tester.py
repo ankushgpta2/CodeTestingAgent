@@ -99,3 +99,5 @@ class CodeTester:
             temperature=0.7,
             max_tokens=500
         )
+
+        return response.choices[0]
