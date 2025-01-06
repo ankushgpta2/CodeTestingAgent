@@ -85,4 +85,10 @@ class CodeTester:
 
         Expected inputs: {spec.expected_inputs}
         Expected outputs: {spec.expected_outputs}
+
+        Please identify:
+        1. Potential edge cases not covered
+        2. Input validation improvements
+        3. Error handling suggestions
+        4. Performance considerations
         """
