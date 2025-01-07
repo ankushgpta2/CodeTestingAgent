@@ -100,4 +100,4 @@ class CodeTester:
             max_tokens=500
         )
 
-        return response.choices[0]
+        return response.choices[0].message.content
