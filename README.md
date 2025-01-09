@@ -1,4 +1,4 @@
-# Code Testing Agent
+# Code Testing Agent Framework
 
 An AI-powered code testing framework that analyzes, tests, and provides feedback on code based on specifications.
 
