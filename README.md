@@ -148,3 +148,11 @@ except TestExecutionError as e:
 - Configurable recursion limits
 - Timeout mechanisms for long-running tests
 - Selective test case execution
+
+🚦 Future Roadmap
+
+- Multi-language support
+- More advanced AI models
+- Enhanced test case generation
+- Performance profiling
+- Integration with CI/CD pipelines
