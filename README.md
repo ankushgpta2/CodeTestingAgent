@@ -127,11 +127,9 @@ class CustomCodeAnalyzer(CodeAnalyzer):
 
 ### Custom Exceptions
 
-```python
-CodeTestingError: Base exception
-ValidationError: Code validation failures
-TestExecutionError: Test runtime errors
-```
+```CodeTestingError```: Base exception
+```ValidationError```: Code validation failures
+```TestExecutionError```: Test runtime errors
 
 ```python
 try:
@@ -149,8 +147,8 @@ except TestExecutionError as e:
 - Timeout mechanisms for long-running tests
 - Selective test case execution
 
-🚦 Future Roadmap
 
+## 🚦 Future Roadmap
 - Multi-language support
 - More advanced AI models
 - Enhanced test case generation
