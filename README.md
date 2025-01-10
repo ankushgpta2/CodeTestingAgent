@@ -122,3 +122,22 @@ class CustomCodeAnalyzer(CodeAnalyzer):
         # Add custom static analysis rules
         pass
 ```
+
+## 🛠 Error Handling
+
+### Custom Exceptions
+
+```python
+CodeTestingError: Base exception
+ValidationError: Code validation failures
+TestExecutionError: Test runtime errors
+```
+
+```python
+try:
+    result = tester.test_code(code, spec)
+except ValidationError as e:
+    print(f"Code validation failed: {e}")
+except TestExecutionError as e:
+    print(f"Test execution error: {e}")
+```
