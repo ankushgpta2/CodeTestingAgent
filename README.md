@@ -141,3 +141,10 @@ except ValidationError as e:
 except TestExecutionError as e:
     print(f"Test execution error: {e}")
 ```
+
+## 📊 Performance Considerations
+
+- Caching analysis results
+- Configurable recursion limits
+- Timeout mechanisms for long-running tests
+- Selective test case execution
