@@ -1,16 +1,16 @@
 # Code Testing Agent Framework
 
-## Overview
+## 🚀 Overview
 An AI-powered code testing framework that analyzes, tests, and provides feedback on code based on specifications.
 
-## Features
+## ✨ Key Features
 - Static code analysis using AST
 - Automatic test case generation
 - AI-powered edge case analysis
 - Comprehensive test execution
 - Detailed feedback and reporting
 
-### Supported Language Models
+### 🤖 Supported Language Models
 
 | Model     | Provider     | Support Level     | Capabilities     |
 |--------------|--------------|--------------|--------------|
@@ -18,7 +18,7 @@ An AI-powered code testing framework that analyzes, tests, and provides feedback
 | GPT-3.5 Turbo | OpenAI | Basic | Standard analysis, limited depth |
 | Claude 3 Opus | Anthropic | Experimental | Advanced reasoning, nuanced feedback |
 
-## Installation
+## 💻 Installation
 
 ### Install from PyPI
 ```bash
@@ -32,7 +32,7 @@ cd code-testing-agent
 pip install -e .
 ```
 
-## Configuration
+## 🔧 Configuration
 
 ### 🔑 API Key Management
 
@@ -56,7 +56,7 @@ from code_testing_agent import CodeTester
 tester = CodeTester(llm_api_key='your-api-key')
 ```
 
-## Detailed Component Breakdown
+## 🔬 Detailed Component Breakdown
 
 ### 1. CodeSpec (Specification Model)
 ```python
