@@ -10,6 +10,14 @@ An AI-powered code testing framework that analyzes, tests, and provides feedback
 - Comprehensive test execution
 - Detailed feedback and reporting
 
+### Supported Language Models
+
+| Model     | Provider     | Support Level     | Capabilities     |
+|--------------|--------------|--------------|--------------|
+| GPT-4 | OpenAI | Full | Advanced analysis, comprehensive feedback |
+| GPT-3.5 Turbo | OpenAI | Basic | Standard analysis, limited depth |
+| Claude 3 Opus | Anthropic | Experimental | Advanced reasoning, nuanced feedback |
+
 ## Installation
 
 ### Install from PyPI
