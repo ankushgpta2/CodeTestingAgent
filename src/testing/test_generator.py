@@ -29,5 +29,10 @@ class TestGenerator:
                     {"inputs": {param_name: " "}, "expected": None},
                     {"inputs": {param_name: "a" * 1000}, "expected": None}
                 ])
+            elif param_type == list:
+                edge_cases.extend([
+                    {"inputs": {param_name: []}, "expected": None},
+                    {"inputs": {param_name: [1] * 1000}, "expected": None}
+                ])
         
         return edge_cases
