@@ -11,6 +11,8 @@ class TestGenerator:
         test_cases = []
         test_cases.extend(spec.example_test_cases)
         edge_cases = self._generate_edge_cases(spec)
+        test_cases.extend(edge_cases)
+        return test_cases
 
     def _generate_edge_cases(self, spec: CodeSpec) -> List[Dict[str, Any]]:
         """Generate edge cases based on input types"""
